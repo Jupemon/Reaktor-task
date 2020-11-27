@@ -11,7 +11,7 @@ class Renderer extends Component {
 
         super(props)
 
-        const {products, amountToRender} = props
+        const { products, amountToRender } = props
 
         this.state = {
             amount : amountToRender,
@@ -34,7 +34,7 @@ class Renderer extends Component {
 
     }
 
-    componentDidUpdate(prevProps) { // Check if props updated, update them
+    componentDidUpdate(prevProps) {
 
         const { products, amountToRender } = this.props
 
@@ -51,16 +51,16 @@ class Renderer extends Component {
         const { rendered } = this.state
         
         return ( 
-        <Container>
-            <Row>
-            {rendered.map(i => {return <Col><Product checkAvailability={this.props.checkAvailability} key={i.id} data={i}/></Col>})}
-            </Row>
-            <Row>
-            <Button onClick={() => {this.renderMoreProducts()}} variant="primary" size="lg" block>
-            Load more...
-            </Button>
-            </Row>
-        </Container>
+            <Container>
+                <Row>
+                    {rendered.map(i => {return <Col key={i.id}><Product checkAvailability={this.props.checkAvailability} data={i}/></Col>})}
+                </Row>
+                <Row>
+                    <Button onClick={() => {this.renderMoreProducts()}} variant="secondary" size="lg" block>
+                    Load more...
+                    </Button>
+                </Row>
+            </Container>
         );
     }
 }

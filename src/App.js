@@ -1,4 +1,3 @@
-import './App.css';
 import NavBar from './Components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react';
@@ -6,8 +5,8 @@ import Renderer from './Components/Renderer/Renderer';
 import { Jumbotron } from 'react-bootstrap';
 
 class App extends Component {
-  state = { 
-    message : "Choose a product",
+  state = {
+    message : "Pick something",
     availability : [],
     selected : null,
     products : []
@@ -31,10 +30,11 @@ class App extends Component {
   }
 
 
-  checkAvailability = async (manufacturer, id) => { // Called by product, Check availability data of a product
+  checkAvailability = async (manufacturer, id) => { // Called by product, return availability data of a product
 
     try {
-      let { products, availability } = this.state
+
+      let { availability } = this.state
 
       if (availability.find(i => i.manufacturer === manufacturer) === undefined) { // Check if data already fetched
   
@@ -100,11 +100,8 @@ class App extends Component {
       return (<div>
       <NavBar fetchProducts={this.fetchProducts}/>
       <Jumbotron fluid>
-    <h1>Pick something</h1>
-    <p>
-    {message}
-    </p>
-</Jumbotron>
+        <h1>{message}</h1>
+      </Jumbotron>
         
       </div>)
     }
@@ -115,7 +112,6 @@ class App extends Component {
         <NavBar fetchProducts={this.fetchProducts}/>
         <div style={{marginBottom:"30px"}}></div>
         <Renderer checkAvailability={this.checkAvailability} products={products[selected].items} amountToRender={10}/>
-        
       </div>
       );
     }
@@ -124,6 +120,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-//

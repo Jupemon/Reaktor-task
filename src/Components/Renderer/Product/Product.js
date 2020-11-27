@@ -31,7 +31,7 @@ class Product extends Component {
         <Card.Text>manufacturer : {manufacturer}</Card.Text>
         <Card.Text>Color : {color}</Card.Text>
         <Card.Text>price : {price}</Card.Text>
-        <Button disabled={loading} onClick={() => {this.handleClick(manufacturer, id)}}>{availability}</Button>
+        <Button variant="secondary" disabled={loading} onClick={() => {this.handleClick(manufacturer, id)}}>{availability}</Button>
       </Card.Body>
     </Card>)
   }
