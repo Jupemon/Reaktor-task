@@ -6,6 +6,15 @@ The idea was to create an UI that a company could use to easily keep track of th
 
 I noticed that there is a bug : If user checks availablity from the same manufacturer quickly it does two identical fetch calls. This doesnt really matter becouse once all manufacturer data is fetched, duplicates dont matter.
 
+## Reaktor Response
+
+Kiitos vielä ennakkotehtävän tekemisestä, tässä muutamia huomioita tehtävästäsi. 
+- Toteutus ei vastaa tehtävässä kuvattua tarvetta, jossa varastosaldot kaikille tuotteille nähtäisiin nopeasti
+- Sovelluksessa ei ole virheenhallintaa, käyttäjä joutuu päivittämään sivun ja yrittämään uudelleen mikäli pyyntö epäonnistuu
+- Sovellus on melko hidas, koska selain ottaa suoraan yhteyttä bad-apiin, sen sijaan että palvelin hakisi ja cachettaisi tämän datan
+- Projektissa on Boostrap-tyylikirjasto käytössä, mutta kirjaston ohi laitetaan kuitenkin inline-tyylejä
+- Koodista saisi huomattavasti selkeämpää, jos datan hakemiseen ja parsintaan liittyvä logiikka irrotettaisiin React-komponentista ja pilkottaisiin pieniin, selkeästi nimettyihin funktioihin
+
 
 ## Links
 
