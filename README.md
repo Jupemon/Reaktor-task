@@ -19,3 +19,4 @@ Kiitos vielä ennakkotehtävän tekemisestä, tässä muutamia huomioita tehtäv
 ## Links
 
 - [View Project](http://Jupemon.github.io/Reaktor-task)
+- [Instructions](https://docs.google.com/document/d/e/2PACX-1vRt76z-t8-JQNTPuDzUZ8WXi0Gy1DuuIcQ4Sfg4NU9XXRUiQF0xxa08OVhNZsOGtT9QQ5KlTfszBb0V/pub)
